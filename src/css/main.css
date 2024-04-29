@@ -1,0 +1,51 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+@import "utility-patterns.css";
+@import "range-slider.css";
+@import "toggle-switch.css";
+@import "theme.css";
+@import "preflight.css";
+
+@import "tailwindcss/utilities";
+
+/* Additional Tailwind directives: https://tailwindcss.com/docs/functions-and-directives/#responsive */
+@layer utilities {
+  .rtl {
+    direction: rtl;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#app-main.loading {
+  opacity: 0.25;
+  transition: opacity 200ms;
+  transition-delay: 200ms;
+}
+
+#app-profile.loading {
+  opacity: 0.5;
+  transition: opacity 200ms;
+  transition-delay: 200ms;
+}
